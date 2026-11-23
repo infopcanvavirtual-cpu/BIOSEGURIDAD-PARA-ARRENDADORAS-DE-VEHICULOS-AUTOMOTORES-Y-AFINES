@@ -1,0 +1,3 @@
+"use strict";
+// Solo demostración. No representa el progreso de Moodle.
+window.INFOPProgress={demo:true,porcentaje:0,renderizar(){const v=Math.max(0,Math.min(100,Number(this.porcentaje)||0));for(const id of ["porcentaje","porcentaje-detalle"]){const e=document.getElementById(id);if(e)e.textContent=`${v}%`;}for(const id of ["barra-progreso","barra-detalle"]){const e=document.getElementById(id);if(e)e.style.width=`${v}%`;}for(const id of ["barra-accesible","barra-detalle-accesible"]){const e=document.getElementById(id);if(e)e.setAttribute("aria-valuenow",String(v));}const estado=document.getElementById("estado-progreso");if(estado)estado.textContent=v===100?"Curso completado":v>0?"Aprendizaje en progreso":"Aún no has comenzado";}};
