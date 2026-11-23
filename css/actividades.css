@@ -1,0 +1,310 @@
+/* Unidades: requiere temas.css antes de este archivo */
+body {
+  background: var(--unidad-fondo);
+  color: var(--unidad-texto);
+}
+
+main,
+section {
+  min-width: 0;
+}
+
+h1, h2, h3 {
+  color: var(--unidad-texto);
+}
+
+p, li {
+  color: var(--unidad-secundario);
+}
+
+/* Cabecera de la unidad: utilizar estas
+   reglas en su contenedor principal */
+.unidad-hero {
+  background: var(--unidad-hero);
+  color: var(--unidad-texto);
+  border: 1px solid var(--unidad-borde);
+  border-radius: 22px;
+}
+
+.unidad-hero h1,
+.unidad-hero p {
+  color: var(--unidad-texto);
+}
+
+/* Panel de objetivos */
+.unidad-objetivos {
+  background: var(--unidad-objetivos);
+  border: 1px solid var(--unidad-borde);
+  border-left: 5px solid #e6b800;
+  border-radius: 16px;
+  color: var(--unidad-texto);
+}
+
+.unidad-objetivos li {
+  color: var(--unidad-texto);
+}
+
+/* Tarjetas de recursos */
+.unidad-recursos {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.unidad-recurso {
+  background: var(--unidad-superficie);
+  color: var(--unidad-texto);
+  border: 1px solid var(--unidad-borde);
+  border-radius: 16px;
+  padding: 22px;
+  min-width: 0;
+  transition: transform .18s ease,
+              border-color .18s ease;
+}
+
+.unidad-recurso:hover {
+  border-color: var(--unidad-acento);
+  transform: translateY(-2px);
+}
+
+.unidad-recurso h3 {
+  color: var(--unidad-texto);
+}
+
+.unidad-recurso p {
+  color: var(--unidad-secundario);
+}
+
+/* Enlaces */
+a {
+  color: var(--unidad-acento);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--unidad-acento);
+  outline-offset: 3px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .unidad-recursos {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Movil */
+@media (max-width: 600px) {
+  .unidad-recursos {
+    grid-template-columns: 1fr;
+  }
+
+  .unidad-hero {
+    padding: 22px;
+  }
+
+  .unidad-recurso {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: clamp(26px, 7vw, 38px);
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================
+   INFOP - PORTADA DE UNIDADES
+   Componentes compartidos
+   ========================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 0;
+  font: 16px/1.6 system-ui,
+        "Segoe UI", Arial, sans-serif;
+}
+
+/* Contenedor */
+.unidad-contenedor {
+  width: min(1150px, 100%);
+  margin: 0 auto;
+  padding: 32px 20px 70px;
+}
+
+/* Regresar */
+.back {
+  display: inline-block;
+  color: var(--unidad-acento);
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+/* Portada */
+.unidad-hero {
+  padding: clamp(25px, 5vw, 56px);
+  overflow: hidden;
+}
+
+.unidad-hero h1 {
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  line-height: 1.12;
+  margin: 12px 0 18px;
+  overflow-wrap: anywhere;
+}
+
+.unidad-hero p {
+  line-height: 1.65;
+  max-width: 850px;
+}
+
+.eyebrow {
+  color: var(--unidad-acento);
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .9rem;
+}
+
+/* Etiquetas */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 15px;
+  border-radius: 100px;
+  border: 1px solid var(--unidad-borde);
+  background: var(--unidad-superficie);
+  color: var(--unidad-texto);
+  font-size: .9rem;
+}
+
+/* Secciones */
+.section {
+  margin-top: 36px;
+}
+
+.section h2 {
+  font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+  margin: 0 0 20px;
+}
+
+/* Objetivos */
+.unidad-objetivos {
+  padding: 20px 28px;
+}
+
+.unidad-objetivos ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.unidad-objetivos li {
+  margin: 8px 0;
+  line-height: 1.7;
+}
+
+/* Tarjetas */
+.unidad-recurso {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.unidad-recurso .emoji {
+  font-size: 30px;
+  line-height: 1.4;
+}
+
+.unidad-recurso h3 {
+  font-size: 1.12rem;
+  margin: 0;
+}
+
+.unidad-recurso p {
+  margin: 0;
+  flex: 1;
+}
+
+.recurso-accion {
+  color: var(--unidad-acento);
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* Nota */
+.note {
+  color: var(--unidad-secundario);
+  font-size: .9rem;
+  margin-top: 28px;
+}
+
+/* Movil */
+@media (max-width: 600px) {
+  .unidad-contenedor {
+    padding: 20px 14px 45px;
+  }
+
+  .unidad-hero {
+    border-radius: 16px;
+  }
+
+  .unidad-objetivos {
+    padding: 18px 20px;
+  }
+
+  .tag {
+    font-size: .82rem;
+  }
+}
+
+
+/* Compatibilidad con el HTML original de unidad 01 */
+.hero { background: var(--unidad-hero); border: 1px solid var(--unidad-borde); border-radius: 22px; padding: clamp(25px,5vw,56px); color: var(--unidad-texto); }
+.hero h1,.hero p { color: var(--unidad-texto); }
+.hero .eyebrow { color: var(--unidad-acento); }
+.grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
+.grid .card { display:flex; flex-direction:column; gap:10px; padding:22px; min-width:0; border:1px solid var(--unidad-borde); border-radius:16px; background:var(--unidad-superficie); color:var(--unidad-texto); text-decoration:none; transition:transform .18s ease,border-color .18s ease; }
+.grid .card:hover { border-color:var(--unidad-acento); transform:translateY(-2px); }
+.grid .card span { color:var(--unidad-secundario); }
+.grid .card em { margin-top:auto; font-style:normal; font-weight:700; color:var(--unidad-acento); }
+.objectives { background:var(--unidad-objetivos); color:var(--unidad-texto); border:1px solid var(--unidad-borde); border-left:5px solid #e6b800; border-radius:16px; padding:20px 28px; }
+.objectives li { color:var(--unidad-texto); }
+.tag { background:var(--unidad-etiqueta-fondo); color:var(--unidad-etiqueta-texto); }
+@media(max-width:900px) { .grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:600px) { .grid { grid-template-columns:1fr; } .hero { padding:22px; } }
+@media(prefers-reduced-motion:reduce) { .grid .card:hover { transform:none; } }

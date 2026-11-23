@@ -1,20 +1,523 @@
-:root{color-scheme:dark;--bg:#0e111b;--surface:#1b2030;--line:#343c51;--text:#f5f7ff;--muted:#b9c2d6;--accent:#7888ff;--accent2:#5369df}*{box-sizing:border-box}body{margin:0;font:16px/1.55 Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}button{font:inherit;cursor:pointer}button:focus-visible{outline:3px solid #c5ccff;outline-offset:3px}.layout{display:grid;grid-template-columns:252px minmax(0,1fr);min-height:100vh}.sidebar{background:#151925;border-right:1px solid var(--line);display:flex;flex-direction:column;padding:24px 15px;position:sticky;top:0;height:100vh}.brand{display:flex;gap:12px;align-items:center;padding:4px 10px 28px}.brand-mark{font-size:32px;color:#a7b0ff}.brand strong,.brand small{display:block}.brand strong{font-size:15px}.brand small{font-size:12px;color:var(--muted)}.menu{display:grid;gap:7px}.nav-link{border:0;border-radius:10px;background:transparent;color:var(--muted);padding:13px 14px;text-align:left;display:flex;gap:12px;align-items:center}.nav-link:hover,.nav-link.active{background:#2a345f;color:white}.sidebar-footer{margin-top:auto;color:#8c97b1;font-size:12px;padding:15px 10px}.workspace{min-width:0;display:flex;flex-direction:column}.topbar{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:16px;padding:0 5%;color:var(--muted)}.pill{margin-left:auto;background:#2b335b;border-radius:25px;padding:5px 12px;font-size:12px;color:#e5e9ff}.menu-toggle{display:none;background:transparent;border:1px solid var(--line);color:white;border-radius:8px;padding:6px 12px}.content{width:min(1120px,92%);margin:34px auto 60px;flex:1}.view[hidden]{display:none}.hero{border:1px solid #444b8e;border-radius:20px;background:linear-gradient(125deg,#30366f,#181c30 80%);padding:48px 40px}.eyebrow{font-size:12px;letter-spacing:2px;font-weight:bold;color:#b7c3ff}h1{font-size:clamp(28px,3.5vw,44px);line-height:1.18;margin:22px 0}h2{font-size:23px;margin:0 0 8px}p{color:var(--muted)}.primary-btn{background:var(--accent2);color:white;border:0;border-radius:9px;padding:13px 21px;font-weight:bold;margin-top:10px}.primary-btn:hover{background:#6c7ef2}.progress-panel{background:var(--surface);border:1px solid var(--line);padding:25px;border-radius:16px;margin-top:24px}.progress-heading{display:flex;align-items:center;justify-content:space-between;gap:15px}.progress-heading strong{font-size:30px;color:#aab6ff}.progress-heading p{margin:0}.progress-track{height:12px;background:#34394a;border-radius:30px;overflow:hidden;margin:18px 0}.progress-track>div{width:0;height:100%;background:linear-gradient(90deg,#526fe4,#9baaff);transition:width .3s}.progress-panel small{color:var(--muted)}.section-title{margin:40px 0 18px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{background:var(--surface);border:1px solid var(--line);border-radius:15px;padding:25px;color:var(--text);text-align:left;display:flex;flex-direction:column;gap:13px;min-height:220px}.card:hover{border-color:var(--accent);transform:translateY(-2px)}.card-icon{font-size:30px}.card strong{font-size:20px}.card span:not(.card-icon){color:var(--muted)}.card em{color:#b7c3ff;font-style:normal;margin-top:auto}.placeholder{border:1px dashed #505c7c;background:var(--surface);padding:50px 20px;text-align:center;border-radius:16px;margin:24px 0;color:var(--muted)}.footer{text-align:center;color:#8f9ab1;border-top:1px solid var(--line);padding:20px;font-size:13px}
+/* Dashboard: requiere temas.css antes de este archivo */
+/* ESTILOS GENERALES */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-/* Identidad institucional Bioseguridad v2.1 */
-:root{--bg:#10101c;--surface:#1d1933;--line:#4a356d;--text:#fffaff;--muted:#d0c8e5;--accent:#ffd338;--accent2:#3459cf}
-.sidebar{background:linear-gradient(180deg,#25104b,#171427 65%);border-right:1px solid #52327e}
-.brand-mark{color:#ffd338}.brand strong{letter-spacing:.02em}
-.nav-link:hover,.nav-link.active{background:#48209a;color:#fff;border-left:3px solid #ffd338}
-.topbar{background:#171326;border-bottom-color:#54347c}
-.pill{background:#42238c;color:#ffe27b;border:1px solid #7854bd}
-.hero{background:linear-gradient(125deg,#391477,#25144d 55%,#111224);border-color:#6d3eaf;padding:26px 34px 36px;overflow:hidden}
-.hero-banner{height:clamp(180px,25vw,330px);border-radius:13px;margin-bottom:26px;overflow:hidden;background:radial-gradient(circle at 25% 20%,#7629dc,#35136e 55%,#101124);display:flex;align-items:center;justify-content:center;position:relative}
-.hero-banner img{display:block;width:100%;height:100%;object-fit:cover}
-.hero-banner.missing::after{content:'BIOSEGURIDAD · INFOP VIRTUAL';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:25px;color:#ffe06c;font-weight:800;letter-spacing:.08em;font-size:clamp(20px,3vw,34px)}
-.eyebrow{color:#ffe27b}.course-label{display:inline-block;background:#f7ce36;color:#231038;font-weight:800;font-size:11px;letter-spacing:.06em;padding:7px 12px;border-radius:7px;margin-bottom:8px}
-.primary-btn{background:#3459cf}.primary-btn:hover{background:#456fe6}
-.progress-heading strong{color:#ffe27b}.progress-track>div{background:linear-gradient(90deg,#3459cf,#7b39dd,#ffd338)}
-.card{background:linear-gradient(150deg,#271c43,#1b1930);border-color:#56377e}.card:hover{border-color:#ffd338}.card em{color:#ffe27b}
-.institutional-logos{margin-left:auto;display:flex;align-items:center;gap:12px;min-height:34px}.official-logo{max-height:34px;max-width:125px;object-fit:contain}.official-logo.missing{display:none}.pill{margin-left:0}
-.placeholder{border-color:#61418e;background:#221b38}
-@media(max-width:700px){.institutional-logos{gap:5px}.official-logo{max-width:65px;max-height:25px}.hero{padding:17px}.hero-banner{height:180px}}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 0;
+  font: 16px/1.55 Arial,Helvetica,sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ESTRUCTURA */
+.layout {
+  display: grid;
+  grid-template-columns: 252px minmax(0,1fr);
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.sidebar {
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 15px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 4px 10px 28px;
+}
+
+.brand-mark {
+  font-size: 32px;
+  color: var(--accent);
+}
+
+.brand strong,
+.brand small {
+  display: block;
+}
+
+.brand strong {
+  font-size: 15px;
+  letter-spacing: .02em;
+}
+
+.brand small {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* NAVEGACION */
+.menu {
+  display: grid;
+  gap: 7px;
+}
+
+.nav-link {
+  border: 0;
+  border-left: 3px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--muted);
+  padding: 13px 14px;
+  text-align: left;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-link:hover:not(.active) {
+  background: var(--nav-active);
+  color: var(--nav-text);
+  border-left-color: transparent;
+}
+
+.nav-link.active {
+  background: var(--nav-active);
+  color: var(--nav-text);
+  border-left-color: var(--yellow);
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  color: var(--footer-text);
+  font-size: 12px;
+  padding: 15px 10px;
+}
+
+.workspace {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ENCABEZADO */
+.topbar {
+  min-height: 72px;
+  border-bottom: 1px solid var(--line);
+  background: var(--topbar-bg);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 5%;
+  color: var(--muted);
+}
+
+.pill {
+  margin-left: auto;
+  background: var(--pill-bg);
+  border: 1px solid var(--line);
+  border-radius: 25px;
+  padding: 5px 12px;
+  font-size: 12px;
+  color: var(--pill-text);
+  white-space: nowrap;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+/* CONTENIDO */
+.content {
+  width: min(1120px,92%);
+  margin: 34px auto 60px;
+  flex: 1;
+  min-width: 0;
+}
+
+.view[hidden] {
+  display: none !important;
+}
+
+/* PORTADA */
+.hero {
+  border: 1px solid var(--hero-border);
+  border-radius: 20px;
+  background: var(--hero-bg);
+  padding: 26px 34px 36px;
+  overflow: hidden;
+}
+
+.hero-banner {
+  height: clamp(180px,25vw,330px);
+  border-radius: 13px;
+  margin-bottom: 26px;
+  overflow: hidden;
+  background: radial-gradient(
+    circle at 25% 20%,
+    #7629dc,#35136e 55%,#101124
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-banner img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-banner.missing::after {
+  content: 'BIOSEGURIDAD · INFOP VIRTUAL';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+  color: #ffe06c;
+  font-weight: 800;
+  letter-spacing: .08em;
+  font-size: clamp(20px,3vw,34px);
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: var(--eyebrow);
+}
+
+.course-label {
+  display: inline-block;
+  background: var(--yellow);
+  color: #231038;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: .06em;
+  padding: 7px 12px;
+  border-radius: 7px;
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-size: clamp(28px,3.5vw,44px);
+  line-height: 1.18;
+  margin: 22px 0;
+  overflow-wrap: anywhere;
+}
+
+h2 {
+  font-size: 23px;
+  margin: 0 0 8px;
+}
+
+p {
+  color: var(--muted);
+}
+
+/* BOTONES */
+.primary-btn {
+  background: var(--accent2);
+  color: #ffffff;
+  border: 0;
+  border-radius: 9px;
+  padding: 13px 21px;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color .18s ease,
+              transform .18s ease;
+}
+
+.primary-btn:hover {
+  background: #456fe6;
+  transform: translateY(-2px);
+}
+
+/* PROGRESO */
+.progress-panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 25px;
+  border-radius: 16px;
+  margin-top: 24px;
+}
+
+.progress-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.progress-heading strong {
+  font-size: 30px;
+  color: var(--accent);
+}
+
+.progress-heading p {
+  margin: 0;
+}
+
+.progress-track {
+  height: 12px;
+  background: var(--progress-bg);
+  border-radius: 30px;
+  overflow: hidden;
+  margin: 18px 0;
+}
+
+.progress-track > div {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(
+    90deg,#3459cf,#7b39dd,#ffd338
+  );
+  transition: width .3s ease;
+}
+
+.progress-panel small {
+  color: var(--muted);
+}
+
+/* TARJETAS */
+.section-title {
+  margin: 40px 0 18px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 15px;
+  padding: 25px;
+  color: var(--text);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  min-height: 220px;
+  min-width: 0;
+  transition: transform .18s ease,
+              border-color .18s ease;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.card-icon {
+  font-size: 30px;
+}
+
+.card strong {
+  font-size: 20px;
+}
+
+.card span:not(.card-icon) {
+  color: var(--muted);
+}
+
+.card em {
+  color: var(--accent);
+  font-style: normal;
+  margin-top: auto;
+}
+
+.placeholder {
+  border: 1px dashed var(--line);
+  background: var(--surface);
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 16px;
+  margin: 24px 0;
+  color: var(--muted);
+}
+
+/* LOGOTIPOS */
+.institutional-logos {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 34px;
+}
+
+.official-logo {
+  max-height: 34px;
+  max-width: 125px;
+  object-fit: contain;
+}
+
+.official-logo.missing {
+  display: none;
+}
+
+.institutional-logos + .pill {
+  margin-left: 0;
+}
+
+/* PIE DE PAGINA */
+.footer {
+  text-align: center;
+  color: var(--footer-text);
+  border-top: 1px solid var(--line);
+  padding: 20px;
+  font-size: 13px;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .content {
+    width: 94%;
+  }
+}
+
+/* MOVIL */
+@media (max-width: 700px) {
+  .layout {
+    grid-template-columns: minmax(0,1fr);
+  }
+
+  .sidebar {
+    position: fixed;
+    z-index: 100;
+    width: min(280px,85vw);
+    height: 100vh;
+    height: 100dvh;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    transition: transform .2s ease;
+    box-shadow: 4px 0 20px #0002;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .topbar {
+    padding: 12px 4%;
+    gap: 10px;
+  }
+
+  .content {
+    width: 94%;
+    margin: 20px auto 40px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .card {
+    min-height: 170px;
+    padding: 20px;
+  }
+
+  .hero {
+    padding: 17px;
+  }
+
+  .hero-banner {
+    height: 180px;
+  }
+
+  .progress-panel {
+    padding: 18px;
+  }
+
+  .institutional-logos {
+    gap: 5px;
+  }
+
+  .official-logo {
+    max-width: 65px;
+    max-height: 25px;
+  }
+}
+
+/* PANTALLAS MUY PEQUEÑAS */
+@media (max-width: 380px) {
+  .pill {
+    display: none;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .hero-banner {
+    height: 145px;
+  }
+}
+
+/* ACCESIBILIDAD Y MOVIMIENTO REDUCIDO */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Tarjetas enlazadas del dashboard: apariencia uniforme */
+a.card { text-decoration: none; }
+a.card strong, a.card span, a.card em { text-decoration: none; }
+a.card:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }

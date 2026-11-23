@@ -1,0 +1,80 @@
+/* INFOP Bioseguridad 2.0: tema compartido. Cargar primero. */
+:root {
+  color-scheme: light;
+
+  --bg: #f5f4fb;
+  --surface: #ffffff;
+  --line: #d9d4e6;
+  --text: #252039;
+  --muted: #55516a;
+  --accent: #5532a6;
+  --accent2: #3157bc;
+
+  --sidebar-bg: #eee9f8;
+  --topbar-bg: #ffffff;
+  --nav-active: #e1d5fa;
+  --nav-text: #35205d;
+  --hero-bg: linear-gradient(125deg,#eee5ff,#f7f4ff);
+  --hero-border: #c4afe9;
+  --card-bg: #ffffff;
+  --card-border: #d9d4e6;
+  --pill-bg: #eee4ff;
+  --pill-text: #472183;
+  --progress-bg: #e4dfed;
+  --focus: #3157bc;
+  --yellow: #ffd338;
+  --eyebrow: #59319b;
+  --footer-text: #55516a;
+  --unidad-fondo: var(--bg);
+  --unidad-superficie: var(--surface);
+  --unidad-texto: var(--text);
+  --unidad-secundario: #514968;
+  --unidad-borde: var(--line);
+  --unidad-acento: #5532a6;
+  --unidad-hero: linear-gradient(125deg,#eee5ff,#ffffff);
+  --unidad-objetivos: var(--surface);
+  --unidad-etiqueta-fondo: #e8ddff;
+  --unidad-etiqueta-texto: #35205d;
+}
+
+/* TEMA OSCURO */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --bg: #10101c;
+    --surface: #1d1933;
+    --line: #4a356d;
+    --text: #fffaff;
+    --muted: #d0c8e5;
+    --accent: #ffd338;
+    --accent2: #3459cf;
+
+    --sidebar-bg: #21143d;
+    --topbar-bg: #171326;
+    --nav-active: #48209a;
+    --nav-text: #ffffff;
+    --hero-bg: linear-gradient(125deg,#391477,#25144d 55%,#111224);
+    --hero-border: #6d3eaf;
+    --card-bg: linear-gradient(150deg,#271c43,#1b1930);
+    --card-border: #56377e;
+    --pill-bg: #42238c;
+    --pill-text: #ffe27b;
+    --progress-bg: #34394a;
+    --focus: #ffd338;
+    --yellow: #ffd338;
+    --eyebrow: #ffe27b;
+    --footer-text: #b9b0d1;
+    --unidad-fondo: var(--bg);
+    --unidad-superficie: #211d35;
+    --unidad-texto: var(--text);
+    --unidad-secundario: var(--muted);
+    --unidad-borde: var(--line);
+    --unidad-acento: #ffd338;
+    --unidad-hero: linear-gradient(125deg,#50109e,#24183f 80%);
+    --unidad-objetivos: #211d35;
+    --unidad-etiqueta-fondo: #372653;
+    --unidad-etiqueta-texto: #fffaff;
+  }
+}
+
