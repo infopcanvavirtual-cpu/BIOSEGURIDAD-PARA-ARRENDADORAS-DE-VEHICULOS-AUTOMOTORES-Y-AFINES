@@ -1,3 +1,175 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>Bioseguridad | INFOP Virtual</title><meta content="Panel educativo de Bioseguridad de INFOP Virtual" name="description"/><script defer="" src="js/progress.js"></script><script defer="" src="js/navigation.js"></script><script defer="" src="js/app.js"></script><link href="css/temas.css" rel="stylesheet"/><link href="css/styles.css" rel="stylesheet"/><link href="css/responsive.css" rel="stylesheet"/></head>
-<body><div class="layout"><aside class="sidebar" id="sidebar"><div class="brand"><span class="brand-mark">✦</span><div><strong>INFOP VIRTUAL</strong><small>Bioseguridad 2.0</small></div></div><nav aria-label="Navegación del curso" class="menu"><button aria-current="page" class="nav-link active" data-view="inicio">⌂ <span>Inicio</span></button><button class="nav-link" data-view="bienvenida">✦ <span>Bienvenida</span></button><button class="nav-link" data-view="unidades">▤ <span>Unidades</span></button><button class="nav-link" data-view="progreso">◉ <span>Mi progreso</span></button></nav><div class="sidebar-footer">INFOP Virtual · Proyecto piloto</div></aside><div class="workspace"><header class="topbar"><button aria-expanded="false" aria-label="Abrir o cerrar menú" class="menu-toggle" id="menu-toggle">☰</button><span>Entorno de aprendizaje</span><div aria-label="Identidad institucional" class="institutional-logos"><img alt="Gobierno de Honduras" class="official-logo" data-official-logo="" src="assets/images/gobierno-honduras.png"/><img alt="INFOP" class="official-logo" data-official-logo="" src="assets/images/infop.png"/></div><span class="pill">Versión institucional · piloto</span></header><main class="content" id="main-content" tabindex="-1"><section class="view active" id="view-inicio"><div class="hero"><div class="hero-banner" id="hero-banner"><img alt="Banner institucional del curso de Bioseguridad" id="official-banner" src="assets/images/banner-bioseguridad.jpg"/></div><span class="eyebrow">FORMACIÓN OFICIAL · INFOP VIRTUAL</span><h1>Bioseguridad para Arrendadoras de Vehículos Automotores y Afines</h1><span class="course-label">BIOSEGURIDAD · FORMACIÓN VIRTUAL</span><p>Tu espacio de aprendizaje, organizado en un solo lugar.</p><button class="primary-btn" data-go="bienvenida">Comenzar aprendizaje →</button></div><section aria-label="Progreso del curso" class="progress-panel"><div class="progress-heading"><div><h2>Mi progreso académico</h2><p id="estado-progreso">Aún no has comenzado</p></div><strong id="porcentaje">0%</strong></div><div aria-label="Avance del curso" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress-track" id="barra-accesible" role="progressbar"><div id="barra-progreso"></div></div><small>Progreso de demostración; no sincronizado con Moodle.</small></section><h2 class="section-title">Explora tu curso</h2><div class="cards"><button class="card" data-go="bienvenida"><span class="card-icon">👋</span><strong>Bienvenida</strong><span>Conoce el curso y su funcionamiento.</span><em>Explorar →</em></button><button class="card" data-go="unidades"><span class="card-icon">📚</span><strong>Unidades formativas</strong><span>Consulta el contenido académico.</span><em>Ver unidades →</em></button></div></section><section class="view" hidden="" id="view-bienvenida"><span class="eyebrow">BIENVENIDA</span><h1>Bienvenido al curso</h1><p>En esta sección incorporaremos el video introductorio, las orientaciones y los recursos institucionales oficiales.</p><div class="placeholder">▶ Espacio reservado para video introductorio</div><button class="primary-btn" data-go="unidades">Ir a las unidades →</button></section><section class="view" hidden="" id="view-unidades"><span class="eyebrow">CONTENIDO FORMATIVO</span><h1>Unidades del curso</h1><p>Accede a los recursos de cada unidad. Estamos perfeccionando la Unidad 01 como plantilla para las siguientes.</p><div class="cards"><a class="card" href="unidades/und-01/index.html"><span class="card-icon">📚</span><strong>Unidad 01 · Bioseguridad y desinfección personal</strong><span>Presentación, material de estudio, juego y evaluación.</span><em>Abrir unidad →</em></a></div><p>Las unidades 02 y 03 se incorporarán después de validar la plantilla de la Unidad 01.</p></section><section class="view" hidden="" id="view-progreso"><span class="eyebrow">SEGUIMIENTO ACADÉMICO</span><h1>Mi progreso</h1><p>Cuando conectemos Moodle, esta sección mostrará el avance real de cada participante.</p><div class="progress-panel"><div class="progress-heading"><h2>Avance general</h2><strong id="porcentaje-detalle">0%</strong></div><div aria-label="Avance general" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress-track" id="barra-detalle-accesible" role="progressbar"><div id="barra-detalle"></div></div><small>Dato de demostración.</small></div></section></main><footer class="footer">INFOP Virtual · Bioseguridad · Diseño institucional piloto</footer></div></div></body></html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Bioseguridad | INFOP Virtual</title>
+<meta content="Panel educativo de Bioseguridad de INFOP Virtual" name="description"/>
+<script defer src="js/progress.js"></script>
+<script defer src="js/navigation.js"></script>
+<script defer src="js/app.js"></script>
+<link href="css/temas.css" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet"/>
+<link href="css/responsive.css" rel="stylesheet"/>
+<link href="css/animaciones.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Iconos (sprite SVG, sin dependencias externas) -->
+<svg aria-hidden="true" style="position:absolute;width:0;height:0" focusable="false">
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.1 8.2 7.5 9.5 4.4-1.3 7.5-4.9 7.5-9.5V6L12 3Z"/><path d="m8.8 12.2 2.4 2.4 4.2-4.6"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11.2 12 4l8 7.2V20a1 1 0 0 1-1 1h-4.5v-5.5h-5V21H5a1 1 0 0 1-1-1v-8.8Z"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 12V5.5a1.5 1.5 0 0 1 3 0V11m0-1V4.5a1.5 1.5 0 0 1 3 0V11m0-4.5a1.5 1.5 0 0 1 3 0V14c0 4-2.5 7-6 7-2.6 0-4-1.2-5.4-3.4L3 14.3a1.5 1.5 0 0 1 2.5-1.6L8 15"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5v-13ZM20 5.5A1.5 1.5 0 0 0 18.5 4H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5v-13Z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4m0 16h16M8 16v-4m4 4V8m4 8v-6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-slides" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="11" rx="1.5"/><path d="M12 15.5V20m-4 0h8"/></symbol>
+  <symbol id="i-game" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="10" rx="5"/><path d="M8 10v4m-2-2h4m5-1v.01M17 13v.01"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="m9 12.5 2 2 4-4.5M9.5 4V3h5v1"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3.5 9 4.7-9 4.8-9-4.8 9-4.7ZM3 12.5l9 4.8 9-4.8M3 16.8l9 4.7 9-4.7"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m10 8.5 5.5 3.5-5.5 3.5v-7Z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"><svg class="ico"><use href="#i-shield"/></svg></span>
+      <div><strong>INFOP VIRTUAL</strong><small>Bioseguridad 2.0</small></div>
+    </div>
+    <nav aria-label="Navegación del curso" class="menu">
+      <button aria-current="page" class="nav-link active" data-view="inicio"><svg class="ico" aria-hidden="true"><use href="#i-home"/></svg><span>Inicio</span></button>
+      <button class="nav-link" data-view="bienvenida"><svg class="ico" aria-hidden="true"><use href="#i-hand"/></svg><span>Bienvenida</span></button>
+      <button class="nav-link" data-view="unidades"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg><span>Unidades</span></button>
+      <button class="nav-link" data-view="progreso"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg><span>Mi progreso</span></button>
+    </nav>
+    <div class="sidebar-footer">INFOP Virtual · Proyecto piloto</div>
+  </aside>
+  <div class="sidebar-backdrop" id="sidebar-backdrop" hidden></div>
+
+  <div class="workspace">
+    <header class="topbar">
+      <button aria-expanded="false" aria-controls="sidebar" aria-label="Abrir o cerrar menú" class="menu-toggle" id="menu-toggle"><svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg></button>
+      <div class="crumbs"><span class="crumbs-root">Entorno de aprendizaje</span><span class="crumbs-sep" aria-hidden="true">/</span><strong id="topbar-title">Inicio</strong></div>
+      <div aria-label="Identidad institucional" class="institutional-logos">
+        <img alt="Gobierno de Honduras" class="official-logo" data-official-logo src="assets/images/gobierno-honduras.png"/>
+        <img alt="INFOP" class="official-logo" data-official-logo src="assets/images/infop.png"/>
+      </div>
+      <span class="pill">Versión institucional · piloto</span>
+    </header>
+
+    <main class="content" id="main-content" tabindex="-1">
+
+      <!-- INICIO -->
+      <section class="view active" id="view-inicio">
+        <div class="hero">
+          <div class="hero-banner" id="hero-banner">
+            <svg class="hero-art" aria-hidden="true" viewBox="0 0 400 200" preserveAspectRatio="xMaxYMid slice">
+              <g fill="none" stroke="currentColor" stroke-width="1.2">
+                <circle cx="330" cy="100" r="40"/><circle cx="330" cy="100" r="70" opacity=".7"/><circle cx="330" cy="100" r="100" opacity=".45"/><circle cx="330" cy="100" r="130" opacity=".25"/>
+              </g>
+              <use href="#i-shield" x="302" y="72" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            </svg>
+            <div class="hero-banner-text"><span>INFOP VIRTUAL</span><strong>Bioseguridad</strong></div>
+            <img alt="Banner institucional del curso de Bioseguridad" id="official-banner" src="assets/images/banner-bioseguridad.jpg"/>
+          </div>
+
+          <div class="hero-body">
+            <div class="hero-tags">
+              <span class="eyebrow">FORMACIÓN OFICIAL · INFOP VIRTUAL</span>
+              <span class="course-label">FORMACIÓN VIRTUAL</span>
+            </div>
+            <h1>Bioseguridad para Arrendadoras de Vehículos Automotores y Afines</h1>
+            <p class="lede">Tu espacio de aprendizaje, organizado en un solo lugar.</p>
+            <div class="hero-actions">
+              <button class="primary-btn" data-go="bienvenida">Comenzar aprendizaje <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+              <button class="ghost-btn" data-go="unidades">Ver unidades</button>
+            </div>
+          </div>
+
+          <ul class="facts" aria-label="Datos del curso">
+            <li><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg><div><strong>3 unidades</strong><span>Formativas</span></div></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg><div><strong>2 horas</strong><span>Unidad 01</span></div></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><div><strong>4 recursos</strong><span>Presentación, lectura, juego y evaluación</span></div></li>
+          </ul>
+        </div>
+
+        <section aria-label="Progreso del curso" class="progress-panel">
+          <div class="progress-heading">
+            <div><h2>Mi progreso académico</h2><p id="estado-progreso">Aún no has comenzado</p></div>
+            <strong id="porcentaje">0%</strong>
+          </div>
+          <div aria-label="Avance del curso" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress-track" id="barra-accesible" role="progressbar"><div id="barra-progreso"></div></div>
+          <small>Progreso de demostración; no sincronizado con Moodle.</small>
+        </section>
+
+        <h2 class="section-title">Explora tu curso</h2>
+        <div class="cards">
+          <button class="card" data-go="bienvenida"><span class="card-icon"><svg class="ico" aria-hidden="true"><use href="#i-hand"/></svg></span><strong>Bienvenida</strong><span>Conoce el curso y su funcionamiento.</span><em>Explorar <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></em></button>
+          <button class="card" data-go="unidades"><span class="card-icon"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><strong>Unidades formativas</strong><span>Consulta el contenido académico.</span><em>Ver unidades <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></em></button>
+          <button class="card" data-go="progreso"><span class="card-icon"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg></span><strong>Mi progreso</strong><span>Revisa tu avance en el curso.</span><em>Ver avance <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></em></button>
+        </div>
+      </section>
+
+      <!-- BIENVENIDA -->
+      <section class="view" hidden id="view-bienvenida">
+        <header class="view-head"><span class="eyebrow">BIENVENIDA</span><h1>Bienvenido al curso</h1>
+        <p class="lede">En esta sección incorporaremos el video introductorio, las orientaciones y los recursos institucionales oficiales.</p></header>
+        <div class="placeholder"><svg class="ico ico-xl" aria-hidden="true"><use href="#i-play"/></svg><strong>Video introductorio</strong><span>Espacio reservado</span></div>
+        <button class="primary-btn" data-go="unidades">Ir a las unidades <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </section>
+
+      <!-- UNIDADES -->
+      <section class="view" hidden id="view-unidades">
+        <header class="view-head"><span class="eyebrow">CONTENIDO FORMATIVO</span><h1>Unidades del curso</h1>
+        <p class="lede">Accede a los recursos de cada unidad. Estamos perfeccionando la Unidad 01 como plantilla para las siguientes.</p></header>
+
+        <div class="unit-list">
+          <a class="unit-card" href="unidades/und-01/index.html">
+            <span class="unit-num" aria-hidden="true">01</span>
+            <div class="unit-main">
+              <span class="badge badge-ok">Disponible</span>
+              <strong>Bioseguridad y desinfección personal</strong>
+              <span>Presentación, material de estudio, juego y evaluación.</span>
+              <ul class="chips" aria-label="Recursos">
+                <li><svg class="ico" aria-hidden="true"><use href="#i-slides"/></svg>Presentación</li>
+                <li><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg>Material</li>
+                <li><svg class="ico" aria-hidden="true"><use href="#i-game"/></svg>Juego</li>
+                <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Evaluación</li>
+              </ul>
+            </div>
+            <em class="unit-cta">Abrir unidad <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></em>
+          </a>
+
+          <div class="unit-card is-locked" aria-disabled="true">
+            <span class="unit-num" aria-hidden="true">02</span>
+            <div class="unit-main"><span class="badge">Próximamente</span><strong>Unidad 02</strong><span>Se incorporará después de validar la plantilla de la Unidad 01.</span></div>
+            <svg class="ico unit-lock" aria-hidden="true"><use href="#i-lock"/></svg>
+          </div>
+          <div class="unit-card is-locked" aria-disabled="true">
+            <span class="unit-num" aria-hidden="true">03</span>
+            <div class="unit-main"><span class="badge">Próximamente</span><strong>Unidad 03</strong><span>Se incorporará después de validar la plantilla de la Unidad 01.</span></div>
+            <svg class="ico unit-lock" aria-hidden="true"><use href="#i-lock"/></svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROGRESO -->
+      <section class="view" hidden id="view-progreso">
+        <header class="view-head"><span class="eyebrow">SEGUIMIENTO ACADÉMICO</span><h1>Mi progreso</h1>
+        <p class="lede">Cuando conectemos Moodle, esta sección mostrará el avance real de cada participante.</p></header>
+        <div class="progress-panel">
+          <div class="progress-heading"><h2>Avance general</h2><strong id="porcentaje-detalle">0%</strong></div>
+          <div aria-label="Avance general" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress-track" id="barra-detalle-accesible" role="progressbar"><div id="barra-detalle"></div></div>
+          <small>Dato de demostración.</small>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">INFOP Virtual · Bioseguridad · Diseño institucional piloto</footer>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+:root {
+  --panel: var(--surface);
+  --card: var(--surface);
+  --ink: var(--text);
+  --border: var(--line);
+  --soft: var(--unidad-etiqueta-fondo);
+  --accent-bg: var(--unidad-etiqueta-fondo);
+  --blue: var(--focus);
+  --hero: var(--hero-navy);
+  --hero-text: var(--infop-blanco);
+  --onhero: var(--infop-blanco);
+  --success: var(--ok-text);
+  --correct: var(--ok-text);
+  --error: #9e3040;
+  --incorrect: var(--error);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --error: #ff9eac;
+  }
+}

@@ -35,7 +35,7 @@ p, li {
 .unidad-objetivos {
   background: var(--unidad-objetivos);
   border: 1px solid var(--unidad-borde);
-  border-left: 5px solid #e6b800;
+  border-left: 5px solid var(--yellow);
   border-radius: 16px;
   color: var(--unidad-texto);
 }
@@ -302,7 +302,7 @@ body {
 .grid .card:hover { border-color:var(--unidad-acento); transform:translateY(-2px); }
 .grid .card span { color:var(--unidad-secundario); }
 .grid .card em { margin-top:auto; font-style:normal; font-weight:700; color:var(--unidad-acento); }
-.objectives { background:var(--unidad-objetivos); color:var(--unidad-texto); border:1px solid var(--unidad-borde); border-left:5px solid #e6b800; border-radius:16px; padding:20px 28px; }
+.objectives { background:var(--unidad-objetivos); color:var(--unidad-texto); border:1px solid var(--unidad-borde); border-left:5px solid var(--yellow); border-radius:16px; padding:20px 28px; }
 .objectives li { color:var(--unidad-texto); }
 .tag { background:var(--unidad-etiqueta-fondo); color:var(--unidad-etiqueta-texto); }
 @media(max-width:900px) { .grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }

@@ -1,40 +1,65 @@
 /* INFOP Bioseguridad 2.0: tema compartido. Cargar primero. */
+/* Paleta institucional: azul marino, blanco y dorado */
 :root {
   color-scheme: light;
 
-  --bg: #f5f4fb;
-  --surface: #ffffff;
-  --line: #d9d4e6;
-  --text: #252039;
-  --muted: #55516a;
-  --accent: #5532a6;
-  --accent2: #3157bc;
+  /* Colores base INFOP */
+  --infop-marino: #0b1f3a;
+  --infop-azul: #123a73;
+  --infop-blanco: #ffffff;
+  --infop-dorado: #d9ac32;
+  --unidad-hero-secundario: #e4ecf9;
 
-  --sidebar-bg: #eee9f8;
+  --bg: #f4f6fa;
+  --surface: #ffffff;
+  --line: #d3dcea;
+  --text: #13223b;
+  --muted: #475671;
+  --accent: #123a73;
+  --accent2: #123a73;
+  --btn-hover: #1c5099;
+
+  --sidebar-bg: #0b1f3a;
+  --sidebar-text: #ffffff;
+  --sidebar-muted: #c6d3e8;
+  --brand-mark: #e8c25a;
   --topbar-bg: #ffffff;
-  --nav-active: #e1d5fa;
-  --nav-text: #35205d;
-  --hero-bg: linear-gradient(125deg,#eee5ff,#f7f4ff);
-  --hero-border: #c4afe9;
+  --nav-active: #1a3d6e;
+  --nav-text: #ffffff;
+  --hero-bg: linear-gradient(125deg,#e4ecf9,#ffffff);
+  --hero-border: #b7c8e4;
+  --banner-bg: radial-gradient(circle at 25% 20%,#245399,#102f5c 55%,#08172e);
+  --banner-text: #f2cf6b;
   --card-bg: #ffffff;
-  --card-border: #d9d4e6;
-  --pill-bg: #eee4ff;
-  --pill-text: #472183;
-  --progress-bg: #e4dfed;
-  --focus: #3157bc;
-  --yellow: #ffd338;
-  --eyebrow: #59319b;
-  --footer-text: #55516a;
+  --card-border: #d3dcea;
+  --pill-bg: #fbf1d5;
+  --pill-text: #664900;
+  --progress-bg: #dce3ef;
+  --progress-fill: linear-gradient(90deg,#123a73,#2563b8,#d9ac32);
+  --focus: #1c5bbd;
+  --yellow: #d9ac32;
+  --on-gold: #0b1f3a;
+  --eyebrow: #755500;
+  --footer-text: #475671;
   --unidad-fondo: var(--bg);
   --unidad-superficie: var(--surface);
   --unidad-texto: var(--text);
-  --unidad-secundario: #514968;
+  --unidad-secundario: #42506a;
   --unidad-borde: var(--line);
-  --unidad-acento: #5532a6;
-  --unidad-hero: linear-gradient(125deg,#eee5ff,#ffffff);
+  --unidad-acento: #123a73;
+  --unidad-hero: linear-gradient(125deg,#e4ecf9,#ffffff);
   --unidad-objetivos: var(--surface);
-  --unidad-etiqueta-fondo: #e8ddff;
-  --unidad-etiqueta-texto: #35205d;
+  --unidad-etiqueta-fondo: #e1eaf8;
+  --unidad-etiqueta-texto: #0b1f3a;
+
+  /* Dashboard v2.2 */
+  --shadow: 0 1px 2px rgba(11,31,58,.06), 0 8px 24px -12px rgba(11,31,58,.18);
+  --shadow-hover: 0 2px 4px rgba(11,31,58,.08), 0 16px 32px -14px rgba(11,31,58,.28);
+  --gold-soft: #fbf1d5;
+  --ok-bg: #e3f4ea;
+  --ok-text: #11633a;
+  --hero-navy: linear-gradient(135deg,#0b1f3a,#123a73 70%);
+  --ghost-border: #9db3d6;
 }
 
 /* TEMA OSCURO */
@@ -42,39 +67,54 @@
   :root {
     color-scheme: dark;
 
-    --bg: #10101c;
-    --surface: #1d1933;
-    --line: #4a356d;
-    --text: #fffaff;
-    --muted: #d0c8e5;
-    --accent: #ffd338;
-    --accent2: #3459cf;
+    --bg: #07111f;
+    --surface: #0f2038;
+    --line: #26436b;
+    --text: #ffffff;
+    --muted: #c3d0e6;
+    --accent: #e8c25a;
+    --accent2: #1f5bb0;
+    --btn-hover: #2a6dcc;
 
-    --sidebar-bg: #21143d;
-    --topbar-bg: #171326;
-    --nav-active: #48209a;
+    --sidebar-bg: #0a1a32;
+    --sidebar-text: #ffffff;
+    --sidebar-muted: #c3d0e6;
+    --brand-mark: #e8c25a;
+    --topbar-bg: #0b172a;
+    --nav-active: #183a6b;
     --nav-text: #ffffff;
-    --hero-bg: linear-gradient(125deg,#391477,#25144d 55%,#111224);
-    --hero-border: #6d3eaf;
-    --card-bg: linear-gradient(150deg,#271c43,#1b1930);
-    --card-border: #56377e;
-    --pill-bg: #42238c;
-    --pill-text: #ffe27b;
-    --progress-bg: #34394a;
-    --focus: #ffd338;
-    --yellow: #ffd338;
-    --eyebrow: #ffe27b;
-    --footer-text: #b9b0d1;
+    --hero-bg: linear-gradient(125deg,#133664,#0e2545 55%,#0a1526);
+    --hero-border: #2e5590;
+    --banner-bg: radial-gradient(circle at 25% 20%,#245399,#102f5c 55%,#08172e);
+    --banner-text: #f2cf6b;
+    --card-bg: linear-gradient(150deg,#132a4b,#0e1d35);
+    --card-border: #2b4a76;
+    --pill-bg: #14345f;
+    --pill-text: #f2cf6b;
+    --progress-bg: #22324d;
+    --progress-fill: linear-gradient(90deg,#2563b8,#5b8fd6,#e8c25a);
+    --focus: #f2cf6b;
+    --yellow: #e8c25a;
+    --on-gold: #0b1f3a;
+    --eyebrow: #f2cf6b;
+    --footer-text: #a9b9d4;
     --unidad-fondo: var(--bg);
-    --unidad-superficie: #211d35;
+    --unidad-superficie: #0f2038;
     --unidad-texto: var(--text);
     --unidad-secundario: var(--muted);
     --unidad-borde: var(--line);
-    --unidad-acento: #ffd338;
-    --unidad-hero: linear-gradient(125deg,#50109e,#24183f 80%);
-    --unidad-objetivos: #211d35;
-    --unidad-etiqueta-fondo: #372653;
-    --unidad-etiqueta-texto: #fffaff;
+    --unidad-acento: #e8c25a;
+    --unidad-hero: linear-gradient(125deg,#163f76,#0c1f3b 80%);
+    --unidad-objetivos: #0f2038;
+    --unidad-etiqueta-fondo: #1a355d;
+    --unidad-etiqueta-texto: #ffffff;
+
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 28px -12px rgba(0,0,0,.6);
+    --shadow-hover: 0 2px 4px rgba(0,0,0,.5), 0 18px 34px -14px rgba(0,0,0,.7);
+    --gold-soft: #14345f;
+    --ok-bg: #123d2a;
+    --ok-text: #8fe0b2;
+    --hero-navy: linear-gradient(135deg,#0a1a32,#123a73 70%);
+    --ghost-border: #3b5f93;
   }
 }
-

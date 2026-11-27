@@ -11,14 +11,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const sidebar = document.getElementById('sidebar');
   const toggle = document.getElementById('menu-toggle');
+  const fondo = document.getElementById('sidebar-backdrop');
   const cerrarMenu = () => {
     sidebar?.classList.remove('open');
+    if (fondo) fondo.hidden = true;
     toggle?.setAttribute('aria-expanded', 'false');
   };
   toggle?.addEventListener('click', () => {
     const abierto = sidebar?.classList.toggle('open') ?? false;
+    if (fondo) fondo.hidden = !abierto;
     toggle.setAttribute('aria-expanded', String(abierto));
   });
+  fondo?.addEventListener('click', cerrarMenu);
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape') cerrarMenu();
   });

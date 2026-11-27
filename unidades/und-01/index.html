@@ -7,23 +7,25 @@
   <title>Unidad 01 | Bioseguridad INFOP</title>
   <link rel="stylesheet" href="../../css/temas.css">
   <link rel="stylesheet" href="../../css/actividades.css">
+  <link rel="stylesheet" href="../../css/animaciones.css">
   <style>
     .unidad-contenedor{width:min(1150px,100%);margin-inline:auto;padding:32px 20px 70px}
-    .unidad-hero{margin-top:24px;padding:clamp(24px,5vw,56px)}
-    .unidad-hero h1{font-size:clamp(2rem,4vw,3.3rem);line-height:1.15;margin:12px 0 18px}
-    .unidad-etiqueta{color:#ffdf60;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    *{box-sizing:border-box} body{margin:0;font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif} .unidad-hero{background:var(--hero-navy);border-bottom:3px solid var(--yellow);margin-top:24px;padding:clamp(24px,5vw,56px)}
+    .unidad-hero p{color:var(--unidad-hero-secundario);max-width:75ch}
+    .unidad-hero h1{color:var(--infop-blanco);font-size:clamp(2rem,4vw,3.3rem);line-height:1.15;margin:12px 0 18px}
+    .unidad-etiqueta{color:var(--banner-text);font-weight:800;letter-spacing:.12em;text-transform:uppercase}
     .unidad-etiquetas{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
     .unidad-duracion{padding:7px 15px;border:1px solid var(--unidad-borde);border-radius:100px;background:var(--unidad-superficie);color:var(--unidad-texto)}
     .unidad-seccion{margin-top:36px}
     .unidad-objetivos{padding:20px 28px}
     .unidad-objetivos li{margin:8px 0}
     .unidad-recurso{display:flex;flex-direction:column;gap:10px;text-decoration:none}
-    .unidad-recurso .emoji{font-size:30px}
+    .unidad-recurso .emoji{display:grid;place-items:center;align-self:flex-start;width:42px;height:42px;border-radius:10px;background:var(--pill-bg);color:var(--pill-text);font-size:23px;font-weight:700}
     .unidad-recurso strong{font-size:1.12rem;color:var(--unidad-texto)}
     .unidad-recurso span{color:var(--unidad-secundario)}
     .unidad-recurso em{margin-top:auto;color:var(--unidad-acento);font-style:normal;font-weight:700}
     .unidad-recurso:hover strong,.unidad-recurso:focus-visible strong{text-decoration:underline;text-underline-offset:3px}
-    .unidad-recurso:focus-visible,.unidad-volver:focus-visible{outline:3px solid #f5c842;outline-offset:4px;border-radius:8px}
+    .unidad-recurso:focus-visible,.unidad-volver:focus-visible{outline:3px solid var(--focus);outline-offset:4px;border-radius:8px}
     .unidad-nota{margin-top:28px;font-size:.9rem;color:var(--unidad-secundario)}
     .unidad-volver{color:var(--unidad-acento);text-decoration:none;font-weight:600}
     .unidad-volver:hover{text-decoration:underline}
@@ -39,9 +41,9 @@
       <h1>Bioseguridad y desinfección personal</h1>
       <p>Aprende a identificar riesgos y aplicar prácticas de higiene y protección personal en el trabajo de arrendadoras de vehículos.</p>
       <div class="unidad-etiquetas" aria-label="Duración de la unidad">
-        <span class="unidad-duracion">⏱ 2 horas</span>
-        <span class="unidad-duracion">📘 1 hora teórica</span>
-        <span class="unidad-duracion">🧤 1 hora práctica</span>
+        <span class="unidad-duracion">2 horas</span>
+        <span class="unidad-duracion">1 hora teórica</span>
+        <span class="unidad-duracion">1 hora práctica</span>
       </div>
     </header>
     <section class="unidad-seccion" aria-labelledby="objetivos-titulo">
@@ -58,26 +60,26 @@
     <section class="unidad-seccion" aria-labelledby="recursos-titulo">
       <h2 id="recursos-titulo">Recursos de aprendizaje</h2>
       <div class="unidad-recursos">
-        <a class="unidad-recurso" href="presentación.html">
-          <span class="emoji" aria-hidden="true">🖥️</span>
+        <a class="unidad-recurso" href="presentacion.html">
+          <span class="emoji" aria-hidden="true">▤</span>
           <strong>Presentación</strong>
           <span>Conceptos fundamentales y medidas de prevención.</span>
           <em>Explorar →</em>
         </a>
         <a class="unidad-recurso" href="material.html">
-          <span class="emoji" aria-hidden="true">📖</span>
+          <span class="emoji" aria-hidden="true">▥</span>
           <strong>Material de estudio</strong>
           <span>Lectura, ejemplos, lista de verificación y generación de PDF.</span>
           <em>Leer →</em>
         </a>
         <a class="unidad-recurso" href="juego.html">
-          <span class="emoji" aria-hidden="true">🎮</span>
+          <span class="emoji" aria-hidden="true">▷</span>
           <strong>Juego educativo</strong>
           <span>Practica decisiones de higiene y protección.</span>
           <em>Practicar →</em>
         </a>
         <a class="unidad-recurso" href="evaluacion.html">
-          <span class="emoji" aria-hidden="true">📝</span>
+          <span class="emoji" aria-hidden="true">✓</span>
           <strong>Evaluación</strong>
           <span>Comprueba lo aprendido con retroalimentación.</span>
           <em>Evaluar →</em>
